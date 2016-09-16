@@ -43,7 +43,7 @@ int main(){
 			}
 
 			case 2:{
-				if(clientes.size()>=0){
+				if(clientes.size()>0){
 				int opEl;
 				cout << "A que cliente desea eliminar: \n";
 				for (int i = 0; i < clientes.size(); ++i){
@@ -58,7 +58,7 @@ int main(){
 			}
 
 			case 3:{
-				if(clientes.size()>=0){
+				if(clientes.size()>0){
 				cout << "---CLIENTES LISTADOS---\n";
 				for (int i = 0; i < clientes.size(); ++i){
 					cout << clientes[i]->toString()<<"\n";
@@ -70,7 +70,7 @@ int main(){
 			}
 
 			case 4:{
-				if(clientes.size()>=0){
+				if(clientes.size()>0){
 				int opVer;
 				cout << "De que cliente desea Verificar tarjeta: \n";
 				for (int i = 0; i < clientes.size(); ++i){
