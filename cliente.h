@@ -6,7 +6,6 @@ class cliente{
 		string nombre;
 		string id;
 		double cantidad;
-		int tarjeta[15];
 	public:
 		cliente();
 		~cliente();
@@ -20,4 +19,5 @@ class cliente{
 		int* getTarjeta();
 		void setTarjeta(int[]);
 		string toString()const;
+		int tarjeta[16];
 };

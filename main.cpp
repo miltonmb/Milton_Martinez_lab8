@@ -68,7 +68,12 @@ int main(){
 					cout << i<<" --- " << clientes[i]->getNombre()<<"\n";
 				}
 				cin >> opVer;
-				clientes[opVer]->getTarjeta();
+				if(luhn(clientes[opVer]->tarjeta)){
+					cout << "Es valida\n";
+				}else{
+					cout << "La tarjeta no es valida\n";
+					clientes.erase(clientes.begin()+opVer);
+				}
 			}
 		}
 	}
@@ -77,7 +82,7 @@ int main(){
 bool luhn(int tarjeta[]) {
         int suma = 0;
         int t = 16;
-        for (int i = 0; i <= 16; i++) {
+        for (int i = 0; i < t; i++) {
             int num = tarjeta[t-i-1];
             if (i % 2 == 1) {
                 num = num * 2;

@@ -16,7 +16,7 @@ cliente::cliente(string n,string i,double c, int t[]){
  	nombre = n;
  	id = i;
  	cantidad = c;
- 	for (int i = 0; i < 15; ++i)
+ 	for (int i = 0; i < 16; ++i)
  	{
  		tarjeta[i]=t[i];
  	}
@@ -55,6 +55,10 @@ string cliente::toString()const{
 	ss << "nombre: "<<nombre<<"\n";
 	ss << "Identidad: "<<id<<"\n";
 	ss << "Dinero: "<<cantidad<<"\n";
-	ss << "Tarjeta de credito: "<<tarjeta<<"\n";
+	ss << "Tarjeta: ";
+	for (int i = 0; i < 16; ++i){
+		ss << tarjeta[i];
+	}
+	ss <<"\n";
 	return ss.str();
 }
