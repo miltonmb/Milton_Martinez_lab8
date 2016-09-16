@@ -43,6 +43,7 @@ int main(){
 			}
 
 			case 2:{
+				if(clientes.size()>=0){
 				int opEl;
 				cout << "A que cliente desea eliminar: \n";
 				for (int i = 0; i < clientes.size(); ++i){
@@ -50,18 +51,26 @@ int main(){
 				}
 				cin >> opEl;
 				clientes.erase(clientes.begin()+opEl);
-				break;
-			}
-
-			case 3:{
-				cout << "---CLIENTES LISTADOS---\n";
-				for (int i = 0; i < clientes.size(); ++i){
-					cout << clientes[i]->toString()<<"\n";
+			}else{
+					cout << "No hay clientes que borrar\n";
 				}
 				break;
 			}
 
+			case 3:{
+				if(clientes.size()>=0){}
+				cout << "---CLIENTES LISTADOS---\n";
+				for (int i = 0; i < clientes.size(); ++i){
+					cout << clientes[i]->toString()<<"\n";
+				}
+			}else{
+				cout << "No hay clientes que listar\n";
+			}
+				break;
+			}
+
 			case 4:{
+				if(clientes.size())
 				int opVer;
 				cout << "De que cliente desea Verificar tarjeta: \n";
 				for (int i = 0; i < clientes.size(); ++i){
