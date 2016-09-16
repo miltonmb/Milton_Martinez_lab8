@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <string.h>
 #include "cliente.h"
 #include <stdio.h>
 #include <vector>
