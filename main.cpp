@@ -2,6 +2,7 @@
 #include <string.h>
 #include "cliente.h"
 #include <stdio.h>
+#include <fstream>
 #include <vector>
 bool luhn(int[]);
 int main(){
