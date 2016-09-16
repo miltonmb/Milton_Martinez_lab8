@@ -3,6 +3,7 @@
 #include "cliente.h"
 #include <stdio.h>
 #include <vector>
+bool luhn(int[]);
 int main(){
 	vector<cliente*> clientes;
 	int opcion;
@@ -51,7 +52,40 @@ int main(){
 				clientes.erase(clientes.begin()+opEl);
 				break;
 			}
-		}
 
+			case 3:{
+				cout << "---CLIENTES LISTADOS---\n";
+				for (int i = 0; i < clientes.size(); ++i){
+					cout << clientes[i]->toString()<<"\n";
+				}
+				break;
+			}
+
+			case 4:{
+				int opVer;
+				cout << "De que cliente desea Verificar tarjeta: \n";
+				for (int i = 0; i < clientes.size(); ++i){
+					cout << i<<" --- " << clientes[i]->getNombre()<<"\n";
+				}
+				cin >> opVer;
+				clientes[opVer]->getTarjeta();
+			}
+		}
 	}
 }
+
+bool luhn(int tarjeta[]) {
+        int suma = 0;
+        int t = 16;
+        for (int i = 0; i <= 16; i++) {
+            int num = tarjeta[t-i-1];
+            if (i % 2 == 1) {
+                num = num * 2;
+            }
+            if (num > 9) {
+                num = num - 9;
+            }
+            suma = suma + num;
+        }
+        return suma % 10 == 0;
+    }
