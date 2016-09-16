@@ -22,15 +22,14 @@ int main(){
 				int num;
 				double cantidad;
 				int tarjeta[15];
+				cout << "---BIENVENIDO A AGREGAR!---";
+				cout << endl;
 				cout << "Ingrese un nombre: ";
 				cin >>nombre;
-				cout << endl;
 				cout << "Ingrese el id: ";
 				cin >> id;
-				cout << endl;
 				cout << "Ingrese la cantidad: ";
 				cin >> cantidad;
-				cout << endl;
 				for (int i = 0; i <= 15; ++i)
 				{
 					cout << "Ingrese el numero "<<i<<" de la tarjeta: ";
@@ -45,6 +44,8 @@ int main(){
 			case 2:{
 				if(clientes.size()>0){
 				int opEl;
+				cout << "---BIENVENIDO A ELIMINAR---";
+				cout << endl;
 				cout << "A que cliente desea eliminar: \n";
 				for (int i = 0; i < clientes.size(); ++i){
 					cout << i<<" --- " << clientes[i]->getNombre()<<"\n";
@@ -59,7 +60,8 @@ int main(){
 
 			case 3:{
 				if(clientes.size()>0){
-				cout << "---CLIENTES LISTADOS---\n";
+				cout << "---BIENVENIDO A CLIENTES LISTADOS---\n";
+				cout << endl;
 				for (int i = 0; i < clientes.size(); ++i){
 					cout << clientes[i]->toString()<<"\n";
 				}
@@ -72,6 +74,8 @@ int main(){
 			case 4:{
 				if(clientes.size()>0){
 				int opVer;
+				cout << "---BIEVENIDO A VERIFICACION DE TARJETAS DE CREDITO---";
+				cout << endl;
 				cout << "De que cliente desea Verificar tarjeta: \n";
 				for (int i = 0; i < clientes.size(); ++i){
 					cout << i<<" --- " << clientes[i]->getNombre()<<"\n";
@@ -89,7 +93,11 @@ int main(){
 				break;
 			}
 		}
+		cout << "Desea continuar[s/n]: ";
+		cin >> respuesta;
+		cout << endl;
 	}
+	clientes.clear();
 }
 
 bool luhn(int tarjeta[]) {
