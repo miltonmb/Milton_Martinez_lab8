@@ -1,10 +1,12 @@
 #include <iostream>
+#include <string>
+using namespace std;
 class cliente{
 	private:
 		string nombre;
 		string id;
 		double cantidad;
-		int[] tarjetas;
+		int tarjeta[15];
 	public:
 		cliente();
 		~cliente();
@@ -15,7 +17,7 @@ class cliente{
 		void setId(string);
 		double getCantidad();
 		void setCantidad(double);
-		int[] getTarjeta();
+		int* getTarjeta();
 		void setTarjeta(int[]);
 		string toString()const;
 };
