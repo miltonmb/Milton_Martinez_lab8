@@ -1,0 +1,10 @@
+nombre: milton
+Identidad: 0801199804782
+Dinero: 12342
+Tarjeta: 1234567894322121
+
+nombre: Pedrito
+Identidad: 080119954373231
+Dinero: 123432
+Tarjeta: 1456787665434543
+

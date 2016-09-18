@@ -62,3 +62,8 @@ string cliente::toString()const{
 	ss <<"\n";
 	return ss.str();
 }
+
+ostream& operator<<(ostream& out,cliente* a){
+        out<<a->toString();
+        return out;
+}

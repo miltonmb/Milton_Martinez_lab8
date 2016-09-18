@@ -19,5 +19,6 @@ class cliente{
 		int* getTarjeta();
 		void setTarjeta(int[]);
 		string toString()const;
+		friend ostream& operator<<(ostream&,cliente*);
 		int tarjeta[16];
 };

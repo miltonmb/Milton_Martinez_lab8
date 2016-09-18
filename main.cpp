@@ -4,9 +4,11 @@
 #include <stdio.h>
 #include <fstream>
 #include <vector>
+#include <fstream>
 bool luhn(int[]);
 int main(){
 	vector<cliente*> clientes;
+	ofstream file;
 	int opcion;
 	char respuesta= 'S';
 	while(respuesta=='s'||respuesta=='S'){
@@ -27,7 +29,7 @@ int main(){
 				cout << endl;
 				cout << "Ingrese un nombre: ";
 				cin >>nombre;
-				cout << "Ingrese el id: ";
+				cout << "Ingrese el ID: ";
 				cin >> id;
 				cout << "Ingrese la cantidad: ";
 				cin >> cantidad;
@@ -98,7 +100,13 @@ int main(){
 		cin >> respuesta;
 		cout << endl;
 	}
+	file.open("clientes.txt",ios::app);
+	for (int i = 0; i < clientes.size(); ++i){
+		file << clientes.at(i);
+		file << endl;
+	}
 	clientes.clear();
+
 }
 
 bool luhn(int tarjeta[]) {
